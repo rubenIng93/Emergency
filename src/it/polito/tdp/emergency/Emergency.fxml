@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.emergenct.EmergencyController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="286.0" prefWidth="344.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="it.polito.tdp.emergency.EmergencyController">
+   <top>
+      <Label text="Simulazione EMERGENCY" textFill="#e35205" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <VBox spacing="12.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Num Studi:" />
+            <Label text="Num Pazienti:" />
+            <Label text="Intervallo Pazienti:">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefWidth="90.0" spacing="2.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txtNumStudi">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txtNumPazienti" />
+            <TextField fx:id="txtIntervalloPazienti" />
+            <Button mnemonicParsing="false" onAction="#doSimulazione" text="Simula">
+               <VBox.margin>
+                  <Insets left="175.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <TextArea fx:id="txtResult" editable="false" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </TextArea>
+   </bottom>
 </BorderPane>
